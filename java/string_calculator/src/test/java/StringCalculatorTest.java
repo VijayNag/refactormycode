@@ -7,11 +7,6 @@ public class StringCalculatorTest {
 	StringCalculator s = new StringCalculator();
 
 	@Test
-	public void testCalculator() throws Exception {
-		assertEquals(7, s.add("//;\n5;2")); // should support custom separators
-	}
-
-	@Test
 	public void emptyStringAddsUpToZero() throws Exception {
 		assertEquals(0, s.add(""));
 	}
@@ -29,5 +24,10 @@ public class StringCalculatorTest {
 	@Test
 	public void addUpTwoNumbersSeparatedWithNewLine() throws Exception {
 		assertEquals(35, s.add("34\n1"));
+	}
+	
+	@Test
+	public void addUpTwoNumbersSeparatedWithCustimSeparator() throws Exception {
+		assertEquals(7, s.add("//;\n5;2"));
 	}
 }
