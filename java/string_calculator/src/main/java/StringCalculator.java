@@ -10,9 +10,8 @@ public class StringCalculator {
 		String[] numbers;
 		if (hasCustomSeparator(s)) {
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
-		} else {
-			numbers = s.split("[\n,]");
 		}
+		numbers = s.split("[\n,]");
 		return numbers;
 	}
 
