@@ -8,9 +8,10 @@ public class StringCalculator {
 	}
 
 	private String[] extractNumbers(String s) {
+		String separator = DEFAULT_SEPARATOR;
 		if (hasCustomSeparator(s))
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
-		return s.split("["+DEFAULT_SEPARATOR+"]");
+		return s.split("["+separator+"]");
 	}
 
 	private boolean hasCustomSeparator(String s) {
