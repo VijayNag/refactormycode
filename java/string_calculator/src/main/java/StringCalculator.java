@@ -6,11 +6,10 @@ public class StringCalculator {
 		String[] numbers;
 		if (s.startsWith("//")) {
 			numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
-			return sum(numbers);
 		} else {
 			numbers = s.split("[\n,]");
-			return sum(numbers);
 		}
+		return sum(numbers);
 	}
 
 	private int sum(String[] numbers) {
