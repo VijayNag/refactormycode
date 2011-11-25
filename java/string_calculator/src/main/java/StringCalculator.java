@@ -4,11 +4,11 @@ public class StringCalculator {
 			return 0;
 		}
 		if (s.startsWith("//")) {
-			int returnValue = 0;
+			int result = 0;
 			for (String n : s.substring(4).split("[\n" + s.charAt(2) + "]")) {
-				returnValue += Integer.parseInt(n);
+				result += Integer.parseInt(n);
 			}
-			return returnValue;
+			return result;
 		} else {
 			int result = 0;
 			for (String n : s.split("[\n,]")) {
