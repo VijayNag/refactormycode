@@ -11,8 +11,7 @@ public class StringCalculator {
 		if (hasCustomSeparator(s)) {
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
 		}
-		numbers = s.split("[\n,]");
-		return numbers;
+		return s.split("[\n,]");
 	}
 
 	private boolean hasCustomSeparator(String s) {
