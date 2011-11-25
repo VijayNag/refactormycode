@@ -9,7 +9,7 @@ public class StringCalculator {
 
 	private String[] extractNumbers(String s) {
 		if (hasCustomSeparator(s))
-			return s.substring(4).split("[\n" + s.charAt(2) + "]");
+			return split(s.substring(4),"\n" + s.charAt(2));
 		return split(s, DEFAULT_SEPARATORS);
 	}
 	
