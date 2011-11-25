@@ -8,12 +8,16 @@ public class StringCalculator {
 
 	private String[] extractNumbers(String s) {
 		String[] numbers;
-		if (s.startsWith("//")) {
+		if (hasCustomSeparator(s)) {
 			numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
 		} else {
 			numbers = s.split("[\n,]");
 		}
 		return numbers;
+	}
+
+	private boolean hasCustomSeparator(String s) {
+		return s.startsWith("//");
 	}
 
 	private int sum(String[] numbers) {
