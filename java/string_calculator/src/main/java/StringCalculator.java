@@ -5,13 +5,15 @@ public class StringCalculator {
 		}
 		if (s.startsWith("//")) {
 			int result = 0;
-			for (String n : s.substring(4).split("[\n" + s.charAt(2) + "]")) {
+			String[] numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
+			for (String n : numbers) {
 				result += Integer.parseInt(n);
 			}
 			return result;
 		} else {
 			int result = 0;
-			for (String n : s.split("[\n,]")) {
+			String[] numbers = s.split("[\n,]");
+			for (String n : numbers) {
 				result += Integer.parseInt(n);
 			}
 			return result;
