@@ -16,8 +16,8 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void testname() throws Exception {
-		assertEquals(0, s.add("")); // should treat empty string as zero
+	public void emptyStringAddsUpToZero() throws Exception {
+		assertEquals(0, s.add(""));
 
 	}
 }
