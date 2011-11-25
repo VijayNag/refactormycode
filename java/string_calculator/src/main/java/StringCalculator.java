@@ -10,11 +10,11 @@ public class StringCalculator {
 			}
 			return returnValue;
 		} else {
-			int r = 0; // result
+			int result = 0;
 			for (String n : s.split("[\n,]")) {
-				r += Integer.parseInt(n);
+				result += Integer.parseInt(n);
 			}
-			return r;
+			return result;
 		}
 	}
 }
