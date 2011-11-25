@@ -7,7 +7,6 @@ public class StringCalculator {
 	}
 
 	private String[] extractNumbers(String s) {
-		String[] numbers;
 		if (hasCustomSeparator(s)) {
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
 		}
