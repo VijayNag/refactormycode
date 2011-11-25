@@ -10,7 +10,11 @@ public class StringCalculator {
 	private String[] extractNumbers(String s) {
 		if (hasCustomSeparator(s))
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
-		return s.split("["+DEFAULT_SEPARATORS+"]");
+		return split(s, DEFAULT_SEPARATORS);
+	}
+	
+	private String[] split(String textToSplit, String separators){
+		return textToSplit.split("["+separators+"]");
 	}
 
 	private boolean hasCustomSeparator(String s) {
