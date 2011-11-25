@@ -3,8 +3,7 @@ public class StringCalculator {
 		if (s.isEmpty()) {
 			return 0;
 		}
-		String[] numbers = extractNumbers(s);
-		return sum(numbers);
+		return sum(extractNumbers(s));
 	}
 
 	private String[] extractNumbers(String s) {
