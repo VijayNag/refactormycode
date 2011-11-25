@@ -1,5 +1,5 @@
 public class StringCalculator {
-	private static final String DEFAULT_SEPARATOR = "\n,";
+	private static final String DEFAULT_SEPARATORS = "\n,";
 
 	public int add(String s) {
 		if (s.isEmpty())
@@ -8,10 +8,10 @@ public class StringCalculator {
 	}
 
 	private String[] extractNumbers(String s) {
-		String separator = DEFAULT_SEPARATOR;
+		String separators = DEFAULT_SEPARATORS;
 		if (hasCustomSeparator(s))
 			return s.substring(4).split("[\n" + s.charAt(2) + "]");
-		return s.split("["+separator+"]");
+		return s.split("["+separators+"]");
 	}
 
 	private boolean hasCustomSeparator(String s) {
