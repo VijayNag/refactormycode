@@ -5,18 +5,18 @@ public class StringCalculator {
 		}
 		if (s.startsWith("//")) {
 			String[] numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
-			int result = 0;
-			for (String n : numbers) {
-				result += Integer.parseInt(n);
-			}
-			return result;
+			return sum(numbers);
 		} else {
 			String[] numbers = s.split("[\n,]");
-			int result = 0;
-			for (String n : numbers) {
-				result += Integer.parseInt(n);
-			}
-			return result;
+			return sum(numbers);
 		}
+	}
+
+	private int sum(String[] numbers) {
+		int result = 0;
+		for (String n : numbers) {
+			result += Integer.parseInt(n);
+		}
+		return result;
 	}
 }
