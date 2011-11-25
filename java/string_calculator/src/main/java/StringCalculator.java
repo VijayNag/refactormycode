@@ -4,12 +4,18 @@ public class StringCalculator {
 			return 0;
 		}
 		String[] numbers;
+		numbers = extractNumbers(s);
+		return sum(numbers);
+	}
+
+	private String[] extractNumbers(String s) {
+		String[] numbers;
 		if (s.startsWith("//")) {
 			numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
 		} else {
 			numbers = s.split("[\n,]");
 		}
-		return sum(numbers);
+		return numbers;
 	}
 
 	private int sum(String[] numbers) {
