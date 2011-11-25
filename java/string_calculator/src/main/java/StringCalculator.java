@@ -9,8 +9,12 @@ public class StringCalculator {
 
 	private String[] extractNumbers(String s) {
 		if (hasCustomSeparator(s))
-			return split(removeSeparatorDefinition(s),"\n" + s.charAt(2));
+			return split(removeSeparatorDefinition(s),extractCustomSeparator(s));
 		return split(s, DEFAULT_SEPARATORS);
+	}
+
+	private String extractCustomSeparator(String s) {
+		return "\n" + s.charAt(2);
 	}
 
 	private String removeSeparatorDefinition(String s) {
