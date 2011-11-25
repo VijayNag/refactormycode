@@ -14,7 +14,7 @@ public class StringCalculator {
 	}
 
 	private String extractCustomSeparator(String s) {
-		return "\n" + s.charAt(2);
+		return Character.toString(s.charAt(2));
 	}
 
 	private String removeSeparatorDefinition(String s) {
