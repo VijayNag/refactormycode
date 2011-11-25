@@ -3,11 +3,12 @@ public class StringCalculator {
 		if (s.isEmpty()) {
 			return 0;
 		}
+		String[] numbers;
 		if (s.startsWith("//")) {
-			String[] numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
+			numbers = s.substring(4).split("[\n" + s.charAt(2) + "]");
 			return sum(numbers);
 		} else {
-			String[] numbers = s.split("[\n,]");
+			numbers = s.split("[\n,]");
 			return sum(numbers);
 		}
 	}
